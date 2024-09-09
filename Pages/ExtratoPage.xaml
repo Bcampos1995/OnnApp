@@ -1,0 +1,14 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnnApp.Pages.ExtratoPage">
+    <StackLayout Padding="20">
+        <Label Text="Extrato" FontSize="24" HorizontalOptions="Center"/>
+        <ListView x:Name="ExtratoListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Descricao}" Detail="{Binding Valor}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

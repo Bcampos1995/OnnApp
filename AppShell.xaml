@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:OnnApp.Pages"
+       x:Class="OnnApp.AppShell">
+
+    <Shell.ToolbarItems>
+        <ToolbarItem IconImageSource="user_icon.png" Order="Primary" Priority="0" Clicked="OnUserIconClicked" />
+    </Shell.ToolbarItems>
+
+    <TabBar>
+        <ShellContent Title="Saldo" Icon="saldo_icon.png" ContentTemplate="{DataTemplate local:SaldoPage}" />
+        <ShellContent Title="Extrato" Icon="extrato_icon.png" ContentTemplate="{DataTemplate local:ExtratoPage}" />
+    </TabBar>
+</Shell>

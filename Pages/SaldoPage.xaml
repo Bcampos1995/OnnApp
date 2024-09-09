@@ -1,0 +1,9 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnnApp.Pages.SaldoPage">
+    <StackLayout Padding="20">
+        <Label Text="Saldo: R$ 1000,00" FontSize="24" x:Name="SaldoLabel"/>
+        <Label Text=""/>
+        <Button Text="Resgatar Saldo" Clicked="OnResgatarSaldoClicked"/>
+    </StackLayout>
+</ContentPage>

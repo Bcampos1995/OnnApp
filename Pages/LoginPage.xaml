@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnnApp.Pages.LoginPage">
+    <StackLayout Padding="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <Image Source="logo_onn.png" HeightRequest="100" WidthRequest="100" />
+        <Label Text=""></Label>
+        <Entry x:Name="UsernameEntry" Placeholder="Usuario" />
+        <Entry x:Name="PasswordEntry" Placeholder="Senha" IsPassword="True" />
+        <Label Text=""></Label>
+        <Button Text="Login" TextColor="White" Clicked="OnLoginButtonClicked" />
+        <Label Text=""></Label>
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Esqueceu sua senha? " />
+                    <Span Text="Clique aqui" TextColor="Blue" TextDecorations="Underline" />
+                </FormattedString>
+            </Label.FormattedText>
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnForgotPasswordTapped" />
+            </Label.GestureRecognizers>
+        </Label>
+    </StackLayout>
+</ContentPage>

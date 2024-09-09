@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:OnnApp.Pages"
+             x:Class="OnnApp.MainPage">
+    <Grid>
+        <!-- Top Bar with User Icon and Links -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="0" Grid.Column="0">
+            <Image Source="user_icon.png" HeightRequest="40" WidthRequest="40" />
+            <StackLayout VerticalOptions="Center" Margin="10,0,0,0">
+                <Frame Padding="0" HasShadow="False">
+                    <Label Text="Dados Pessoais" TextColor="Blue" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnDadosPessoaisTapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame Padding="0" HasShadow="False">
+                    <Label Text="Cadastro Bancário" TextColor="Blue" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCadastroBancarioTapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" Grid.ColumnSpan="2">
+            <!-- Main Content with Bottom Icons -->
+            <TabbedPage>
+                <ContentPage Title="Saldo" IconImageSource="saldo_icon.png">
+                    <StackLayout Padding="20">
+                        <Label Text="Saldo: R$ 1000,00" FontSize="Large" />
+                        <Button Text="Resgatar Saldo" Clicked="OnResgatarSaldoClicked" />
+                    </StackLayout>
+                </ContentPage>
+                <ContentPage Title="Extrato" IconImageSource="extrato_icon.png">
+                    <StackLayout Padding="20">
+                        <!-- Exemplo de item de extrato -->
+                        <Label Text="Descrição de lançamentos e resgates de saldos" />
+                    </StackLayout>
+                </ContentPage>
+            </TabbedPage>
+        </StackLayout>
+    </Grid>
+</ContentPage>

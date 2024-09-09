@@ -1,0 +1,11 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnnApp.Pages.DadosPessoaisPage">
+    <StackLayout Padding="20">
+        <Label Text="Dados Pessoais" FontSize="24" HorizontalOptions="Center"/>
+        <Label Text="" />
+        <Label Text="Nome: Teste 1" />
+        <Label Text="CPF: 123.456.789-01" />
+        <Label Text="E-mail: teste@teste.com" />
+    </StackLayout>
+</ContentPage>
